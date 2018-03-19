@@ -3,7 +3,7 @@ import os,re,time,random
 def download_mp4(url,dir):
     headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36Name','Referer':'http://91porn.com'}
     req=requests.get(url=url)
-    filename=str(dir)+'/1.mp4'
+    filename=str(dir)+'/na1ve.mp4'
     with open(filename,'wb') as f:
         f.write(req.content)
 def download_img(url,dir):
@@ -41,14 +41,13 @@ while flag<=100:
         if os.path.exists(str(t))==False:
             try:
                 os.makedirs(str(t))
-                print('开始下载:'+str(t))
-                download_img(str(img_url[0]),str(t))
+                print('Start:'+str(t))
                 download_mp4(str(video_url[0]),str(t))
-                print('下载完成')
+                print('Finished!')
             except:
                 pass
         else:
-            print('已存在文件夹,跳过')
+            print('This folder was existed!')
             time.sleep(2)
     flag=flag+1
-    print('此页已下载完成，下一页是'+str(flag))
+    print('This page was finished, next page:'+str(flag))
