@@ -50,4 +50,4 @@ while flag<=100:
             print('This folder was existed!')
             time.sleep(2)
     flag=flag+1
-    print('This page was finished, next page:'+str(flag))
+    print('This page was finished, next page(s):'+str(flag))
